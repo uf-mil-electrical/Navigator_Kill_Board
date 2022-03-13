@@ -31,16 +31,20 @@
 ### Questions/Issues
 * Which variant of the Kill Board is currently installed (Kill Board or Kill Switch)? 
 ### Answers
-¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯
+	--Not Sure will have to look at navigator --Alex 
 
 ## Interface
 Each CAN to USB board only supports up to 2 CAN nodes.
+	--No, USB to can is a entry/exit to the bus, there can be upto 128 or 256 nodes on the bus --Alex
 	
 ### Questions
 * Is one already installed?
 	* If so, is there space for the kill system on that board?
+		-- The can to usb will be a seperate board  -- Alex
 * If we have to add a CAN to USB board, are there spares or do we have build and solder a new one?
+		-- There are 2 being put together, you can use one of those --Alex 
 * What's the current CAN ID format being used for the NaviGator?
+		-- Unsure, you can design this yourself --Alex 
 ### Answers
 ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯
 
