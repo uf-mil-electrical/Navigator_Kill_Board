@@ -1,17 +1,16 @@
 # Navigator Kill Board Project Overview
 
 ## General
-* Get everybody on the same page in terms of software, access to documentation, and how we'll be moving forward
-	* Make sure everybody has Altium, Code Composer Studio, and Git/Github
-	* Potentially helpful software, schematics, and documentation
-		* [Altium Project of Kill Board to be updated](https://github.com/uf-mil-electrical/SVN-Legacy/tree/master/Navigator%20SVN/Current%20Projects/Kill%20Board)
-		* [Another variant of Kill Board](https://github.com/uf-mil-electrical/SVN-Legacy/tree/master/Navigator%20SVN/Current%20Projects/Kill%20Switch)
-		* [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://www.ti.com/lit/gpn/tm4c123gh6pm)
-		* [Introduction to the Controller Area Network (CAN)](https://www.ti.com/lit/an/sloa101b/sloa101b.pdf)
-		* [CAN_to_USB_TIVA](https://github.com/uf-mil-electrical/SVN-Legacy/tree/master/Navigator%20SVN/Current%20Projects/CAN_to_USB_TIVA)
-		* [CAN ID Format for SubjuGator](https://github.com/uf-mil-electrical/SVN-Legacy/blob/master/Subjugator%20SVN/Firmware/CAN%20ID%20Groups.xlsx)	
-		* [Generic Navigator Documentation](https://github.com/uf-mil-electrical/NaviGator-Wiring-Documentaion)
-		* Appendix B of [Maritime RobotX Challenge Rules and Requirements v1](https://robonation.org/app/uploads/sites/2/2021/06/2022-Maritime-RobotX-Challenge-Rules-and-Requirements-v1.0.pdf) contains specifications the Kill Board has to meet
+* Some of our questions have been answered. Still in the process of getting access to Solar Park to look at Navigator. We'll proceed with what's in the [firmware](https://github.com/uf-mil-electrical/Navigator_Kill_Board/edit/master/Project%20Overview.md#firmware) section. If the delay is too long, we'll assume Kill Switch is what's on the sub and work from there. (03/13/2022)
+* Potentially helpful software, schematics, and documentation
+	* [Altium Project of Kill Board to be updated](https://github.com/uf-mil-electrical/SVN-Legacy/tree/master/Navigator%20SVN/Current%20Projects/Kill%20Board)
+	* [Another variant of Kill Board](https://github.com/uf-mil-electrical/SVN-Legacy/tree/master/Navigator%20SVN/Current%20Projects/Kill%20Switch)
+	* [Tiva™ TM4C123GH6PM Microcontroller Datasheet](https://www.ti.com/lit/gpn/tm4c123gh6pm)
+	* [Introduction to the Controller Area Network (CAN)](https://www.ti.com/lit/an/sloa101b/sloa101b.pdf)
+	* [CAN_to_USB_TIVA](https://github.com/uf-mil-electrical/SVN-Legacy/tree/master/Navigator%20SVN/Current%20Projects/CAN_to_USB_TIVA)
+	* [CAN ID Format for SubjuGator](https://github.com/uf-mil-electrical/SVN-Legacy/blob/master/Subjugator%20SVN/Firmware/CAN%20ID%20Groups.xlsx)	
+	* [Generic Navigator Documentation](https://github.com/uf-mil-electrical/NaviGator-Wiring-Documentaion)
+	* Appendix B of [Maritime RobotX Challenge Rules and Requirements v1](https://robonation.org/app/uploads/sites/2/2021/06/2022-Maritime-RobotX-Challenge-Rules-and-Requirements-v1.0.pdf) contains specifications the Kill Board has to meet
 * Do a better job at documenting our work and making that documentation easily accesible and centralized for those in the future than our predecessors 
 * Answering our own questions
 	* Look at past documentation
@@ -20,7 +19,7 @@
 
 ## Hardware/PCB
 ### Tasks
-1. Port over old schematics for the kill board, leaving out the microcontroller and uart module that are going to be replaced
+1. Port over old schematics for the kill board, leaving out the microcontroller and UART module that are going to be replaced
 2. Add in Tiva microcontroller (Most likely TM4C123GH6PM)
 3. Add in CAN Transceiver (Most likely SN65HVD230DR)
 4. Add in failsafe functionality, if not already implemented
@@ -34,22 +33,14 @@
 	--Not Sure will have to look at navigator --Alex 
 
 ## Interface
-Each CAN to USB board only supports up to 2 CAN nodes.
-	--No, USB to can is a entry/exit to the bus, there can be upto 128 or 256 nodes on the bus --Alex
+There's no pre-existing CAN network on the Navigator so we can proceed without any constraints from one. We have to design our own CAN ID format to interface with the computer. That format should be able to be extended by future projects if need be. 
 	
 ### Questions
-* Is one already installed?
-	* If so, is there space for the kill system on that board?
-		-- The can to usb will be a seperate board  -- Alex
 * If we have to add a CAN to USB board, are there spares or do we have build and solder a new one?
 		-- There are 2 being put together, you can use one of those --Alex 
-* What's the current CAN ID format being used for the NaviGator?
-		-- Unsure, you can design this yourself --Alex 
-### Answers
-¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯ ¯\_(ツ)_/¯
 
 ## Firmware
-Can't really do much until we have the above layers done and settled. Till then let's familiarize ourselves with Tiva developement.
+Let's set up boilerplate and other code that doesn't depend on the implementation of the layers above while we're waiting for access to Navigator.
 
 ## Building and Wiring
 
