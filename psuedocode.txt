@@ -1,0 +1,87 @@
+signal_to_kill = local_signal_to_kill | remote_signal_to_kill | port_bow_kill_switch | port_stern_kill_switch | strBrd_bow_kill_switch | strBrd_stern_kill_switch
+
+main()
+{
+	timer_init();
+	CAN_init();
+	LED_init();
+	
+	while(true)
+	{
+		if(!local_heartbeat) //if else-ifs in order of priority
+		{
+			kill_thrusters();
+			LEDs = RED;
+			all_killed = true;
+			
+			//extra code specific to when we don't receive a heartbeat signal from the motherboard
+		}
+		else if(!remote_heartbeat)
+		{
+			kill_thrusters();
+			LEDs = RED;
+			all_killed = true;
+			//extra code specific to when we don't receive a heartbeat signal from the antenna
+		}
+		else if(signal_to_kill)
+		{
+			kill_thrusters();
+			LEDs = RED;
+			all_killed = true;
+			//extra code specific to when we receive a signal to kill all thrusters
+		}
+		
+		
+		//looks at lower-level messages from the CAN bus and update status flags from them
+		//Higher-level messages should trigger a CAN interrupt (e.g. motherboard heartbeat signal)
+		read_can_message_objects(); 
+		
+		//implement protocol to allow system to get back online
+		
+		
+		//code to handle motherboard requests to kill specific thrusters
+		if(!all_killed)
+		{
+			
+		}
+		
+		
+	}
+}
+
+timer_init()
+{
+	//set local heartbeat timer max count; it it gets to this count, we assume motherboard is dead
+	//set up corresponding timer interrupt
+	
+	/set remote heartbeat timer max count; it it gets to this count, we assume antenna is dead
+	//set up corresponding timer interrupt
+}
+
+//Interrupt service routine to handle the motherboard heartbeat signal from CAN
+ISR_local_heartbeat_CAN
+{
+	if(!local_heartbeat_locked) //lock exists as a safeguard against glitching motherboard so after first failure, motherboard can't proceed willy-nilly
+	{
+		local_heartbeat = true;
+		local_heatbeat_timer_count = 0; //i.e. reset heartbeat timer so it doesn't go off
+	}
+}
+
+ISR_local_heartbeat_timer
+{
+	//since this went off, we know motherboard hasn't talked to us in a while 
+	local_heartbeat = false;
+	local_heartbeat_locked = true;
+}
+
+ISR_remote_heartbeat
+{
+	//similar to local version
+}
+
+ISR_remote_heartbeat_timer
+{
+	//similar to local version
+}
+
