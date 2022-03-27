@@ -44,7 +44,7 @@ There's no pre-existing CAN network on the Navigator so we can proceed without a
 
 ## Firmware
 Let's set up boilerplate and other code that doesn't depend on the implementation of the layers above while we're waiting for access to Navigator.
-
+* For PD7, remember to unlocked using direct register writes to the relevant GPIO_O_LOCK and GPIO_O_CR registers before this calling function GPIOPinTypeGPIOInput
 ## Building and Wiring
 
 ## Testing
