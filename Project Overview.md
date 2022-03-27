@@ -13,6 +13,7 @@
 	* [Generic Navigator Documentation](https://github.com/uf-mil-electrical/NaviGator-Wiring-Documentaion)
 	* Appendix B of [Maritime RobotX Challenge Rules and Requirements v1](https://robonation.org/app/uploads/sites/2/2021/06/2022-Maritime-RobotX-Challenge-Rules-and-Requirements-v1.0.pdf) contains specifications the Kill Board has to meet
 	* [Programming TI MCU using Tiva C LaunchPad](https://publiclab.org/notes/JSummers/12-29-2018/programming-texas-instruments-microcontrollers-using-the-tiva-c-launchpad)
+	* [Tiva Firmware Drivers Documentation](https://ume.gatech.edu/mechatronics_lab/LabMaterials/6_TivaWare_Peripheral_Driver_Library_User_Guide_Rev2.1.1.71.pdf)
 * Do a better job at documenting our work and making that documentation easily accesible and centralized for those in the future than our predecessors 
 * Answering our own questions
 	* Look at past documentation
