@@ -21,6 +21,9 @@
 	* Physical investigations and probes of NaviGator
 
 ## Hardware/PCB
+### Verification
+* Probe voltage values of stop buttons; if they're not 3.3, convert them as such before connecting to MCU
+* Check capacitor footprint matches with what MIL has
 ### Tasks
 1. Port over old schematics for the kill board, leaving out the microcontroller and UART module that are going to be replaced
 2. Add in Tiva microcontroller (Most likely TM4C123GH6PM)
