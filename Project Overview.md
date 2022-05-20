@@ -36,7 +36,7 @@
 ### Questions/Issues
 * Which variant of the Kill Board is currently installed (Kill Board or Kill Switch)? 
 ### Answers
-	--Not Sure will have to look at navigator --Alex 
+	--Kill Board 
 
 ## Interface
 There's no pre-existing CAN network on the Navigator so we can proceed without any constraints from one. We have to design our own CAN ID format to interface with the computer. That format should be able to be extended by future projects if need be. 
