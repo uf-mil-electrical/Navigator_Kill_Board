@@ -1,5 +1,8 @@
 # Navigator Kill Board Project Overview
 
+### 07/16/2022
+ST60-2230C-U Transceiver + 1000146 Antenna
+
 ## General
 * Assign Aditya the task of creating and updating as we go electrical/hardware and firmware flow diagrams so that people (us included) can get a quick understanding visually of the system and our code (03/17/2022) 
 * Some of our questions have been answered. Still in the process of getting access to Solar Park to look at Navigator. We'll proceed with what's in the [firmware](https://github.com/uf-mil-electrical/Navigator_Kill_Board/edit/master/Project%20Overview.md#firmware) section. If the delay is too long, we'll assume Kill Switch is what's on the sub and work from there. (03/13/2022)
