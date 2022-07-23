@@ -100,23 +100,6 @@ GenerateClassCluster=0
 DocumentUniqueId=BHSRRADH
 
 [Document4]
-DocumentPath=Radio.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=4
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=LEQVDAOT
-
-[Document5]
 DocumentPath=Top_Level.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -133,7 +116,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QQWEHFXT
 
-[Document6]
+[Document5]
 DocumentPath=Power.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -150,8 +133,8 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VCRKOKDK
 
-[Document7]
-DocumentPath=Kill_board.PcbDoc
+[Document6]
+DocumentPath=KillBoard.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -165,7 +148,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=AUANWWCF
+DocumentUniqueId=CDUCFQTR
 
 [Configuration1]
 Name=Sources
