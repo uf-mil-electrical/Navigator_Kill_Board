@@ -1,7 +1,7 @@
 # Navigator Kill Board Project Overview
 
-### 07/16/2022
-ST60-2230C-U Transceiver + 1000146 Antenna
+### 07/23/2022
+Look whether J7, 8, 11, 14 need to be switched to 3-pin header MOLEX-HDR-1x3-SHERLOCK_VERT
 
 ## General
 * Assign Aditya the task of creating and updating as we go electrical/hardware and firmware flow diagrams so that people (us included) can get a quick understanding visually of the system and our code (03/17/2022) 
